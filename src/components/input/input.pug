@@ -1,0 +1,10 @@
+mixin input(bem, data)
+  +b('input', bem, 'div')(class="js-brand-input")&attributes(attributes)
+    +e('field', {t: 'input'})(
+      type=data.field.type ? data.field.type : 'text'
+      class=data.field.class
+      name=data.field.name
+      required=data.field.required
+      autocomplete=data.field.autocomplete
+      placeholder = data.field.text ? data.field.text : ''
+    )&attributes(inputAttributes)

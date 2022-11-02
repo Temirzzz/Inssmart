@@ -1,0 +1,73 @@
+.paragraph {
+  $self: &;
+
+  &_title {
+    font-family: "Montserrat-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: #0c0c0c;
+    margin-bottom: 20px;
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  &_item {
+    font-size: 16px;
+    line-height: 24px;
+    color: #494949;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_item:last-child {
+    margin-bottom: 0;
+  }
+
+  &_characteristic-title {
+    font-family: "Montserrat-Medium";
+    font-size: 18px;
+    line-height: 27px;
+    color: #0c0c0c;
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &_mb-20 {
+    margin-bottom: 20px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &_mt-40 {
+    margin-top: 40px;
+  }
+
+  &_characteristic {
+    font-size: 16px;
+    line-height: 24px;
+    color: #494949;
+    margin-bottom: 16px;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_no-indent {
+    margin: 0;
+  }
+}

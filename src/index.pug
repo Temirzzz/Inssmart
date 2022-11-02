@@ -1,0 +1,98 @@
+include ../node_modules/bempug/index
+- BEMPUG.modifier = '_';
+
+//- blocks imports
+include ./blocks/head/head
+include ./blocks/section/section
+
+//- components imports
+include ./components/paragraph/paragraph
+include ./components/image/image
+include ./components/button/button
+include ./components/tabs/tabs
+include ./components/tabs/tabs-block/tabs-block
+include ./components/input/input
+
+
+doctype html
+html
+  +head({title: "Мужские и женские велосипеды"})
+  body.main
+      +section({m: "tabs"})
+        +tabs({m: "button"}, {name: 'bycicle', title: "", list: ["Горный велосипед", "Женский велосипед"]})
+        +tabs-block(class="mt-20-cards js-active" id="tab-bycicle-1-block")
+          +section({m: "container"})
+            +section({m: "flex.overflow-hiden"})
+              +image({m: 'main-image'},{src: "./images/main_image.png"})
+              +section({m: "tab-content"})
+                +paragraph({m: 'title'}) Велосипед STELS Navigator 510 HD 26 2022
+                +paragraph({m: 'item'}) Данный велосипед с колесами 26 дюймов хорошо подходит высоким подросткам. Прогиб рамы и небольшой размер рамы расчитан на рост от 135 до 165 см.
+                +paragraph({m: 'item'}) Суммарный вес велосипеда был снижен до 16,9 кг, так как рама была изготовлена с учетом использования велосипеда подростками.
+            +section({m: "uderline"})
+            +section({m: "flex.column"})
+              +paragraph({m: 'characteristic-title.mb-20'}) Характеристики
+            +section({m: "flex"})
+              +section({m: "flex.column.mb-40"})
+                +paragraph({m: 'characteristic'}) 1. Двойной обод
+                +paragraph({m: 'characteristic.no-indent'}) 2. Алюминиевый сплав
+              +section({m: "flex.column.mb-40.to-input"})
+                +paragraph({m: 'characteristic'}) 3. Колеса диаметром 26 дюймов
+                +paragraph({m: 'characteristic.no-indent'}) 2. Покрышки 26х1,95"
+            +section({m: "flex.column"})
+              +paragraph({m: 'characteristic-title.mb-20'}) Добавить характеристику
+            +section({m: "flex.input-block.mb-40.posr"})
+              +input({}, {
+                field: {
+                  required: false,
+                  name: 'text',
+                  class: 'text-inpur js-input-field'
+                }
+              })
+              +e('error-message', {t:'span'})(class='error-message') Не менее 5-ти символов!
+              +button({m: 'blue.mwid'}, {teg: "", text: 'Добавить'}) 
+            +section({m: "flex"})
+              +section({m: "button-block.flex.flex.nowrap"})
+                +button({m: 'blue'}, {teg: "", text: 'Окей'}) 
+                +button({m: 'white'}, {teg: "", text: 'Отмена'}) 
+        +tabs-block(class="mt-20-cards " id="tab-bycicle-2-block")
+          +section({m: "container"})
+            +section({m: "flex.overflow-hiden"})
+              +image({m: 'main-image'},{src: "./images/main_image2.png"})
+              +section({m: "tab-content"})
+                +paragraph({m: 'title'}) Велосипед SCHWINN Traveler women 2022
+                +paragraph({m: 'item'}) Женский велосипед со стальной рамой Classic step-true lightweight позволяет девушкам без проблем его перемещать.
+                +paragraph({m: 'item'}) На данном велосипеде имеется 7 скоростей с переключателями от Shimano, а жесткая вилка обеспечивает отличную управляемость. Подходит для катания по асфальтированным поверхностям.
+            +section({m: "uderline"})
+            +section({m: "flex.column"})
+              +paragraph({m: 'characteristic-title.mb-20'}) Характеристики
+            +section({m: "flex.to-input"})
+              +section({m: "flex.column.mb-40"})
+                +section({m: "flex.characteristic-wrapper.nowrap"})
+                  +image({m: 'icon'},{src: "./images/fi-rr-bike.svg"})
+                  +paragraph({m: 'characteristic'})  Стальная рама
+                +section({m: "flex.characteristic-wrapper.nowrap"})
+                  +image({m: 'icon'},{src: "./images/fi-rr-bike.svg"})
+                  +paragraph({m: 'characteristic.no-indent'}) Жесткая вилка
+              +section({m: "flex.column"})
+                +section({m: "flex.characteristic-wrapper.nowrap"})
+                  +image({m: 'icon'},{src: "./images/fi-rr-bike.svg"})
+                  +paragraph({m: 'characteristic'}) Колеса диаметром 24 дюймов
+                +section({m: "flex.characteristic-wrapper.nowrap"})
+                  +image({m: 'icon'},{src: "./images/fi-rr-bike.svg"})
+                  +paragraph({m: 'characteristic.no-indent'}) 7 скоростей
+            +section({m: "flex.column"})
+              +paragraph({m: 'characteristic-title.mb-20'}) Добавить характеристику
+            +section({m: "flex.input-block.mb-40.posr"})
+              +input({}, {
+                field: {
+                  required: false,
+                  name: 'text',
+                  class: 'text-inpur js-input-field'
+                }
+              })
+              +e('error-message', {t:'span'})(class='error-message') Не менее 5-ти символов!
+              +button({m: 'blue.mwid'}, {teg: "", text: 'Добавить'}) 
+            +section({m: "flex"})
+              +section({m: "button-block.flex.nowrap"})
+                +button({m: 'blue'}, {teg: "", text: 'Окей'}) 
+                +button({m: 'white'}, {teg: "", text: 'Отмена'}) 

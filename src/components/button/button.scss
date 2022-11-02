@@ -1,0 +1,54 @@
+.button {
+  $self: &;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    border: none;
+    cursor: pointer;
+  }
+
+  &_blue {
+    button {
+      width: 128px;
+      height: 52px;
+      background: #3922c5;
+      border-radius: 16px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 24px;
+      margin-right: 5px;
+      @media screen and (max-width: 767px) {
+        width: 120px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  &_white {
+    button {
+      width: 128px;
+      height: 52px;
+      background: #fff;
+      border-radius: 16px;
+      color: #0c0c0c;
+      font-size: 16px;
+      line-height: 24px;
+      @media screen and (max-width: 767px) {
+        width: 120px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  &_mwid {
+    button {
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+}

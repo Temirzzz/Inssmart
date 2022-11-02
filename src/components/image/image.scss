@@ -1,0 +1,38 @@
+.image {
+  $self: &;
+
+  &__item {
+    width: 100%;
+    height: auto;
+  }
+
+  &_main-image {
+    .image__img-wrapper {
+      margin-left: -60px;
+      margin-right: 71px;
+      @media screen and (max-width: 820px) {
+        margin-right: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        margin-left: unset;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    .image__item {
+      min-width: 358px;
+      @media screen and (max-width: 767px) {
+        min-width: unset;
+        max-width: 295px;
+      }
+    }
+  }
+
+  &_icon {
+    .image__item {
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "./helpers/fonts";
+// Blocks styles
+@import "../../blocks/**/*.scss";
+// Components styles
+@import "../../components/**/*.scss";
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Montserrat-Regular";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #f4f4f4;
+  margin: 81px 20px 81px 102px;
+  @media screen and (max-width: 820px) {
+    margin: 40px 20px;
+  }
+}
+
+.error-message {
+  position: absolute;
+  display: none;
+  font-size: 12px;
+  bottom: -15px;
+  left: 10px;
+  color: red;
+  @media screen and (max-width: 767px) {
+    bottom: 54px;
+  }
+  &_show {
+    display: block;
+  }
+}
