@@ -2,6 +2,7 @@ export default class Input {
   constructor() {
     this.inputs = document.querySelectorAll(".input__field");
     this.errorMessage = document.querySelector(".error-message");
+    this.inputBtn = document.querySelector(".button__self-button");
     this.buildCache();
     this.bindEvents();
   }
@@ -15,12 +16,16 @@ export default class Input {
   bindEvents() {}
 
   validateInput() {
+    this.inputBtn.setAttribute("disabled", "");
+    this.inputBtn.style.cursor = "auto";
     this.inputs.forEach((input) => {
       input.addEventListener("input", (event) => {
         if (event.target.value.length < 5) {
           input.parentElement.nextSibling.classList.add("error-message_show");
         } else {
           input.parentElement.nextSibling.classList.remove("error-message_show");
+          this.inputBtn.removeAttribute("disabled", "");
+          this.inputBtn.style.cursor = "pointer";
         }
       });
     });
