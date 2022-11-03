@@ -11,16 +11,19 @@ export default class Input {
     this.validateInput();
   }
 
-  buildCache() {}
+  buildCache() {
+    this.inputBtn.setAttribute("disabled", "");
+    this.inputBtn.style.cursor = "auto";
+  }
 
   bindEvents() {}
 
   validateInput() {
-    this.inputBtn.setAttribute("disabled", "");
-    this.inputBtn.style.cursor = "auto";
     this.inputs.forEach((input) => {
       input.addEventListener("input", (event) => {
         if (event.target.value.length < 5) {
+          this.inputBtn.setAttribute("disabled", "");
+          this.inputBtn.style.cursor = "auto";
           input.parentElement.nextSibling.classList.add("error-message_show");
         } else {
           input.parentElement.nextSibling.classList.remove("error-message_show");
